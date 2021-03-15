@@ -3,17 +3,12 @@ var Today = moment().format('MMMM Do YYYY');
 $("#itsToday").text(Today);
 console.log(Today)
 
+var nowTask = (localStorage.getItem("10:00am"))
 
 
-
-
-function displayTasks() {
-}
 //read localStorage Item (time, task) 
 
 //display .time-block text next to matching .hour div 
-
-
 
 
 
@@ -27,3 +22,9 @@ localStorage.setItem(time, JSON.stringify(task));
 
 }); 
 //----------------------------------------but seriously leave it alone//
+
+
+
+//yay i figured out how to at least get it to show up in console log
+//call the specific key that shows up in the local storage list of key/val pairs 
+console.log(localStorage.getItem("10:00am", ))

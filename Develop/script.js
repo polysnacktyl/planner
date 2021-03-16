@@ -13,6 +13,7 @@ $(".saveBtn").click(function () {
     var time = $(this).siblings(".hour")[0].innerText.trim();
     var task = $(this).siblings(".time-block")[0].innerText.trim();
 
+
     localStorage.setItem(time, JSON.stringify(task));
 
 });
@@ -25,11 +26,11 @@ $(".saveBtn").click(function () {
 // console.log(localStorage.getItem("9:00am"))
 
 $(".hour").each(function () {
-    var key = $(this).innerText;
+    var key = $(this).text();
     var text = localStorage.getItem(key);
     $(this).siblings(".time-block")[0].innerText = text;
 
-    console.log(key); //undefined
+    console.log(key);
     console.log(text);//returning null
 
 });

@@ -14,7 +14,7 @@ $(".saveBtn").click(function () {
     var task = $(this).siblings(".time-block")[0].innerText.trim();
 
 
-    localStorage.setItem(time, JSON.stringify(task));
+    localStorage.setItem(time, task);
 // console.log(localStorage.getItem("9:00am"))
 });
 //----------------------------------------nope. 
@@ -23,9 +23,9 @@ $(".saveBtn").click(function () {
 
 
 $(".hour").each(function () {
-    var key = $(this).text();
+    var key = $(this).text().trim();
     var text = localStorage.getItem(key);
-    $(this).siblings(".time-block").innerText = text;
+    $(this).siblings(".time-block")[0].innerText = text;
 
     console.log(key);
     console.log(text);//returning null

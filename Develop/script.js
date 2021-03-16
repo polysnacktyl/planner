@@ -28,7 +28,7 @@ $(".saveBtn").click(function () {
 $(".hour").each(function () {
     var key = $(this).text();
     var text = localStorage.getItem(key);
-    $(this).siblings(".time-block")[0].innerText = text;
+    $(this).siblings(".time-block").innerText = text;
 
     console.log(key);
     console.log(text);//returning null

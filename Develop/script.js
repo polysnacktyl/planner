@@ -7,7 +7,7 @@ console.log(Today)
 
 
 
-//---------------------------------------this works don't futz with it//
+//-------------------note to self: this works don't futz with it//
 $(".saveBtn").click(function () {
 
     var time = $(this).siblings(".hour")[0].innerText.trim();
@@ -15,15 +15,12 @@ $(".saveBtn").click(function () {
 
 
     localStorage.setItem(time, JSON.stringify(task));
-
-});
-//----------------------------------------but seriously leave it alone//
-
-
-
-//yay i figured out how to at least get it to show up in console log
-//call the specific key that shows up in the local storage list of key/val pairs 
 // console.log(localStorage.getItem("9:00am"))
+});
+//----------------------------------------nope. 
+
+
+
 
 $(".hour").each(function () {
     var key = $(this).text();
